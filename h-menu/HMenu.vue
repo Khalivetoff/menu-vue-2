@@ -220,15 +220,15 @@ class HMenu extends Vue {
   }
 
   onActivatorHover() {
-    (!this.internalValue && !this.disableActivator && this.activateOnHover) && this.open();
+    (!this.disableActivator && this.activateOnHover && !this.internalValue ) && this.open();
   }
 
   onActivatorLeave() {
-    (this.internalValue && !this.disableActivator && this.activateOnHover) && this.close();
+    (!this.disableActivator && this.activateOnHover && this.internalValue) && this.close();
   }
 
   onActivatorClick() {
-    (!this.internalValue && !this.disableActivator && !this.activateOnHover) && this.open();
+    (!this.disableActivator && !this.activateOnHover && !this.internalValue) && this.open();
   }
 
   addListeners() {
