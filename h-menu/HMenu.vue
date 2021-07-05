@@ -142,7 +142,6 @@ class HMenu extends Vue {
     this.$nextTick(() => {
       setTimeout(() => {
         this.zIndex = '';
-        // this.coords = { ...EmptyCoords };
       }, 200);
     });
   }
