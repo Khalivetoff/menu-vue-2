@@ -112,7 +112,7 @@ class HMenu extends Vue {
 
   zIndex = '';
 
-  @Watch('internValue')
+  @Watch('internalValue')
   onInternalValueChange(val) {
     this.$emit('input', val);
   }
